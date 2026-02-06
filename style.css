@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff6b9d 0%, #ffc3e0 50%, #ff6b9d 100%);
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in;
+}
+
+.love h2 {
+    font-size: 3rem;
+    color: #d63447;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.love h2 span {
+    color: #ff6b9d;
+    font-weight: bold;
+}
+
+.love a {
+    display: inline-block;
+    margin: 15px 20px;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.love a:first-of-type {
+    background-color: #ff4757;
+    color: white;
+    transition: all 0.1s ease-out;
+}
+
+.love a:first-of-type:hover {
+    background-color: #d63447;
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4);
+}
+
+.love a:last-of-type {
+    background-color: #2ed573;
+    color: white;
+}
+
+.love a:last-of-type:hover {
+    background-color: #26de81;
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(46, 213, 115, 0.4);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heart animation background */
+body::before {
+    content: "❤️";
+    position: absolute;
+    font-size: 100px;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+    top: 10%;
+    left: 10%;
+}
+
+body::after {
+    content: "💕";
+    position: absolute;
+    font-size: 80px;
+    opacity: 0.1;
+    animation: float 5s ease-in-out infinite;
+    bottom: 15%;
+    right: 15%;
+}
+/* Additional floating hearts */
+.container::before {
+    content: "💖";
+    position: absolute;
+    font-size: 60px;
+    opacity: 0.15;
+    animation: float 7s ease-in-out infinite;
+    top: 50%;
+    left: 5%;
+    z-index: -1;
+}
+
+.container::after {
+    content: "💗";
+    position: absolute;
+    font-size: 70px;
+    opacity: 0.15;
+    animation: float 6.5s ease-in-out infinite;
+    top: 20%;
+    right: 8%;
+    z-index: -1;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes! 💕</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e, #ffa8a8);
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            text-align: center;
+            color: white;
+            padding: 40px;
+        }
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            animation: bounce 1s infinite;
+        }
+        p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        .hearts {
+            font-size: 3em;
+            margin-top: 20px;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .back-button {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: white;
+            color: #ff6b6b;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .back-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Yayy, I love you sosososo much!</h1>
+        <div class="hearts">💕 💖 💕</div>
+        <p>Mine forever 😊</p>
+        <img src="cat.gif" alt="Cute cat" style="max-width: 400px; margin-top: 30px; border-radius: 20px;">
+    </div>
+    <a href="index.html" class="back-button">Valentine?</a>
+    <script src="catscript.js"></script>
+</body>
+</html>
